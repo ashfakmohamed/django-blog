@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% block title %}Posts · My Blog{% endblock %}
+{% block content %}
+<section class="page-heading">
+<div><p class="eyebrow">Community journal</p><h1>Latest posts</h1></div>
+{% if user.is_authenticated %}<a class="button" href="{% url 'create_post' %}">Write a post</a>{% endif %}
+</section>
+{% for post in page %}
+<article class="card">
+    <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+    <p class="meta">By {{ post.author.username }} · {{ post.created_at|date:"M j, Y" }}</p>
+    <p>{{ post.content|truncatewords:40 }}</p>
+    <a href="{% url 'post_detail' post.pk %}">Read more →</a>
+</article>
+{% empty %}
+<div class="empty-state"><h2>No posts yet</h2><p>Sign in and publish the first one.</p></div>
+{% endfor %}
+{% if page.paginator.num_pages > 1 %}
+<nav class="pagination" aria-label="Post pages">
+{% if page.has_previous %}<a href="?page={{ page.previous_page_number }}">Previous</a>{% endif %}
+<span>Page {{ page.number }} of {{ page.paginator.num_pages }}</span>
+{% if page.has_next %}<a href="?page={{ page.next_page_number }}">Next</a>{% endif %}
+</nav>
+{% endif %}
+{% endblock %}

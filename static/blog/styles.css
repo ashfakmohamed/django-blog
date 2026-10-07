@@ -1,0 +1,14 @@
+:root{color-scheme:light;--ink:#18212f;--muted:#637083;--surface:#fff;--canvas:#f4f7fb;--brand:#176b5d;--brand-dark:#105248;--danger:#b42318;--border:#d8e0ea}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--canvas);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--brand)}a:hover{color:var(--brand-dark)}.container{width:min(920px,calc(100% - 2rem));margin-inline:auto}
+.site-header{border-bottom:1px solid var(--border);background:var(--surface)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{color:var(--ink);font-size:1.25rem;font-weight:800;text-decoration:none}.nav-actions,.actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.inline-form{display:inline}.welcome,.meta{color:var(--muted)}main{padding-block:2.5rem 4rem}.page-heading{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.5rem}
+h1,h2{line-height:1.2}h1{font-size:clamp(2rem,5vw,3.4rem);margin:.2rem 0}h2{margin-top:0}.eyebrow{color:var(--brand);font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.card,.form-card,.empty-state{background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:0 8px 24px rgba(24,33,47,.05);margin-bottom:1rem;padding:clamp(1.25rem,4vw,2rem)}
+.card h2 a{color:var(--ink);text-decoration:none}.post-content{margin-block:2rem}.narrow{max-width:560px;margin-inline:auto}
+.button,button{display:inline-block;border:0;border-radius:8px;background:var(--brand);color:#fff;cursor:pointer;font:inherit;font-weight:700;padding:.65rem 1rem;text-decoration:none}
+.button:hover,button:hover{background:var(--brand-dark);color:#fff}.button.secondary{background:#e7eeec;color:var(--brand-dark)}.button.danger{background:var(--danger)}
+label{display:block;font-weight:700;margin-bottom:.35rem}input,textarea{width:100%;border:1px solid var(--border);border-radius:8px;font:inherit;padding:.75rem}textarea{resize:vertical}
+.field,form p{margin-bottom:1rem}.errorlist{color:var(--danger)}.helptext{color:var(--muted);font-size:.875rem}.messages{list-style:none;padding:0}.messages li{background:#e8f5f1;border:1px solid #a9d7cc;border-radius:8px;margin-bottom:1rem;padding:.75rem 1rem}
+.pagination{display:flex;justify-content:center;gap:1rem;padding-top:1.5rem}@media(max-width:640px){.nav,.page-heading{align-items:flex-start;flex-direction:column;padding-block:.8rem}.welcome{display:none}}
