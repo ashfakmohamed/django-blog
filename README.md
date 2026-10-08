@@ -1,4 +1,9 @@
-# My Blog
+# Django Blog
+
+<!-- profile-upgrade -->
+[![Django CI](https://github.com/ashfakmohamed/django-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/ashfakmohamed/django-blog/actions/workflows/ci.yml)
+
+**Stack:** Python · Django · HTML · CSS
 
 A small Django publishing app with public reading and authenticated writing.
 
@@ -31,3 +36,10 @@ python manage.py check
 python manage.py makemigrations --check --dry-run
 python manage.py test
 ~~~
+
+## Engineering quality
+
+- GitHub Actions runs Django checks and the automated test suite on every push.
+- Runtime configuration is documented through `.env.example`; secrets are not committed.
+- Local databases, uploaded media, caches, and virtual environments are excluded from version control.
+- Security-sensitive behavior and authorization rules are documented above.
